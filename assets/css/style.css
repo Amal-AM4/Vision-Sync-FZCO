@@ -10,7 +10,7 @@
     --secondary-bg-color: #f2f4f7;
     --primary-text-color: #151c26;
 
-    --nav-linkColor: #9d9d9d;
+    --nav-linkColor: #5d5d5d;
     --small-textColor: #667085;
 }
 
@@ -34,7 +34,7 @@
 
 .small-text {
     font-size: 90%;
-    text-align: justify;
+    text-align: left;
     line-height: 1.6rem;
     color: var(--small-textColor);
 }
@@ -67,7 +67,7 @@
 }
 
 .buttonwav:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 /* Liquid wave animation loop */
@@ -118,7 +118,8 @@ nav {
     width: 60%;
     margin: 0 auto;
     padding: 8px 30px;
-    background: rgba(224, 224, 224, 0.2);
+    /* background: rgba(224, 224, 224, 0.2); */
+    background-color: #f2f4f79d;
     backdrop-filter: blur(10px);
     border-radius: 42px;
 }
