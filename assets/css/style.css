@@ -2,14 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: url('cursor-3.png'), auto;
 }
 
 :root {
-    --primary-bg-color: #2b5bca;
+    --primary-bg-color: #006cd5;
+    --secondary-bg-color: #f2f4f7;
     --primary-text-color: #151c26;
 
-    --box-bgColor: #f2f4f7;
-    --nav-linkColor: #959595;
+    --nav-linkColor: #9d9d9d;
+    --small-textColor: #667085;
 }
 
 .link:link,
@@ -17,6 +19,7 @@
 .link:visited {
     display: inline-block;
     text-decoration: none;
+    font-weight: bold;
     color: var(--nav-linkColor);
     transition: color 0.3s ease;
 }
@@ -25,17 +28,64 @@
     color: var(--primary-bg-color);
 }
 
+.main-head {
+    font-size: 52px;
+}
+
+.small-text {
+    font-size: 90%;
+    text-align: justify;
+    line-height: 1.6rem;
+    color: var(--small-textColor);
+}
+
 .logo {
     width: 60px;
     height: auto;
 }
 
+.link:first-child {
+    text-align: left;
+}
+
+.active:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .buttonwav {
+    position: relative;
     display: inline-block;
     background-color: var(--primary-bg-color);
     color: #fff;
     padding: 8px 32px;
     border-radius: 42px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.buttonwav:hover {
+    transform: scale(1.05);
+}
+
+/* Liquid wave animation loop */
+.buttonwav .wave {
+    position: absolute;
+    top: 0;
+    left: -200%;
+    width: 200%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.25) 0%, transparent 70%);
+    animation: wave-loop 3s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.buttonwav .text {
+    position: relative;
+    z-index: 1;
 }
 
 .icon-arrow {
@@ -43,28 +93,34 @@
     font-size: 20px;
 }
 
+
+section {
+    padding: 48px 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
 body {
-    cursor: url('cursor-3.png'), auto;
     background-color: #fff;
-    /* background-image: url('../images/testbg.jpg'); */
     color: var(--primary-text-color);
     font-size: 18px;
     font-family: sans-serif;
 }
 
 header {
-    padding: 16px 0;
+    padding: 16px 0 80px 0;
 }
 
 nav {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
     width: 60%;
-    background-color: red;
     margin: 0 auto;
     padding: 8px 30px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(224, 224, 224, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 42px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
 }
 
 nav ul {
@@ -81,4 +137,72 @@ nav ul li {
 
 nav ul li:first-child {
     text-align: left;
+}
+
+.hero {
+    height: 80vh;
+    padding: 32px 0;
+}
+
+.hero .row:nth-child(1) {
+    display: flex;
+    padding: 12px 0;
+    height: 500px;
+    gap: 32px;
+}
+
+.hero .row:nth-child(1) .col-1 {
+    width: 40%;
+}
+
+.hero .row:nth-child(1) .col-1 .container {
+    /* background-color: var(--secondary-bg-color); */
+    background-image: url('../images/home_slider2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    border-radius: 32px;
+}
+
+.hero .row:nth-child(1) .col-2 {
+    width: 60%;
+}
+
+.hero .row:nth-child(1) .col-2 .container {
+    background-color: var(--secondary-bg-color);
+    height: 500px;
+    padding: 32px;
+    border-radius: 32px;
+}
+
+.hero .row:nth-child(1) .col-2 .container::selection {
+    background-color: var(--primary-bg-color);
+    color: #fff;
+}
+
+.hero .row:nth-child(1) .col-2 .container h2 {
+    margin-bottom: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Wave animation keyframes */
+@keyframes wave-loop {
+    0% {
+        left: -200%;
+    }
+    100% {
+        left: 100%;
+    }
 }
