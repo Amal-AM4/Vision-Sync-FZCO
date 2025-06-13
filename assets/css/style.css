@@ -419,6 +419,7 @@ nav ul li:first-child {
   overflow: hidden;
   /* box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06); */
   padding: 16px;
+  margin-right: 18px;
   text-align: left;
 }
 
@@ -434,6 +435,15 @@ nav ul li:first-child {
   font-size: 14px;
   color: #888;
   margin-bottom: 8px;
+}
+
+.latestNews .row .col-2 .my-slider-news .slide-item:hover {
+    background-color: #0858a0;
+}
+
+.latestNews .row .col-2 .my-slider-news .slide-item:hover h3,
+.latestNews .row .col-2 .my-slider-news .slide-item:hover span {
+  color: #fff;
 }
 
 .latestNews .row .col-2 .my-slider-news .news-title {
