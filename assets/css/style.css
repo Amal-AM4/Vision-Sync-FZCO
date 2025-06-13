@@ -78,11 +78,12 @@
     border-radius: 42px;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .buttonwav:hover {
     transform: scale(1.08);
+    background-color: #000;
 }
 
 /* Liquid wave animation loop */
