@@ -100,6 +100,11 @@ section {
     margin: 0 auto;
 }
 
+section::selection {
+    background-color: var(--primary-bg-color);
+    color: #fff;
+}
+
 body {
     background-color: #fff;
     color: var(--primary-text-color);
@@ -141,7 +146,7 @@ nav ul li:first-child {
 }
 
 .hero {
-    height: 80vh;
+    /* height: 80vh; */
     padding: 32px 0;
 }
 
@@ -157,7 +162,6 @@ nav ul li:first-child {
 }
 
 .hero .row:nth-child(1) .col-1 .container {
-    /* background-color: var(--secondary-bg-color); */
     background-image: url('../images/home_slider2.jpg');
     background-size: cover;
     background-position: center;
@@ -176,14 +180,57 @@ nav ul li:first-child {
     border-radius: 32px;
 }
 
-.hero .row:nth-child(1) .col-2 .container::selection {
-    background-color: var(--primary-bg-color);
-    color: #fff;
-}
-
 .hero .row:nth-child(1) .col-2 .container h2 {
     margin-bottom: 120px;
 }
+
+.hero .row:nth-child(2) {
+    display: flex;
+    padding: 12px 0;
+    gap: 32px;
+    margin-top: 24px;
+}
+
+.hero .row:nth-child(2) .col-1 {
+    width: 40%;
+}
+
+.hero .row:nth-child(2) .col-1 .container {
+    background-color: var(--secondary-bg-color);
+    height: 140px;
+    padding: 20px 0;
+    border-radius: 32px;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* vertically center images */
+}
+
+.my-slider {
+    display: flex;
+    align-items: center;
+}
+
+.my-slider img {
+    max-height: 100%;
+    max-width: 100%;
+    height: 60px;       /* maintain consistent row height */
+    width: auto;        /* maintain aspect ratio */
+    margin: 0 auto;
+    display: block;
+    object-fit: contain; /* ensures image fits within bounds without stretching */
+    padding: 0 20px;     /* spacing between logos */
+    transition: transform 0.3s ease;
+}
+
+.my-slider img:hover {
+    transform: scale(1.08); /* optional zoom effect */
+}
+
+/* Center button in the column */
+.hero .row:nth-child(2) .col-2 {
+  width: 60%;
+}
+
 
 
 
