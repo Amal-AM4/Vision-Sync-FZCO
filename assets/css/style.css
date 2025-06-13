@@ -567,6 +567,54 @@ nav ul li:first-child {
 }
 
 
+.strategy {
+    padding-bottom: 48px;
+}
+
+.strategy .wrapper {
+    padding: 48px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6)), /* Transparent overlay */
+    url('../images/gradient-3.jpg'); /* Background image */;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-radius: 32px;
+}
+
+.strategy .wrapper .main-head {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.strategy .wrapper .row {
+    display: flex;
+}
+
+.strategy .wrapper .row .col-1,
+.strategy .wrapper .row .col-2 {
+    flex: 1;
+}
+
+.strategy .wrapper .row .col-1 p {
+    width: 90%;
+    line-height: 1.6rem;
+}
+
+.strategy .wrapper .row .col-2 ul {
+    list-style-type: none;
+}
+
+.strategy .wrapper .row .col-2 ul li {
+    padding: 4px  8px;
+    color: var(--small-textColor);
+}
+
+.strategy .wrapper .row .col-2 ul li .icon-x {
+    padding-right: 10px;
+    display: inline-block;
+    color: var(--nav-linkColor);
+}
 
 
 
