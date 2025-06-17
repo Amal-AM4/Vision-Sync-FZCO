@@ -12,6 +12,14 @@
 
     --nav-linkColor: #5d5d5d;
     --small-textColor: #667085;
+
+
+    --bg-black: #333333;
+    --bg-white: #f2f2f2;
+}
+
+.white-text {
+    color: var(--bg-white);
 }
 
 .link:link,
@@ -44,7 +52,7 @@
 }
 
 .box {
-    background-color: var(--secondary-bg-color);
+    background-color: var(--bg-white);
     padding: 32px;
     border-radius: 32px;
 }
@@ -122,7 +130,8 @@ section::selection {
 }
 
 body {
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: var(--bg-black);
     color: var(--primary-text-color);
     font-size: 18px;
     font-family: sans-serif;
@@ -520,7 +529,8 @@ nav ul li:first-child {
 }
 
 .our-services .sub-title {
-    color: var(--small-textColor);
+    /* color: var(--small-textColor); */
+    color: #f2f2f2c5;
     width: 60%;
     margin: 0 auto;
     line-height: 1.8rem;
